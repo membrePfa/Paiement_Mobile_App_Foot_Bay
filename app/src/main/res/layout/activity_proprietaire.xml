@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".REGISTERINFOACTIVITY"
+    android:background="@drawable/terrain"
+    >
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Saisir vos information"
+        android:textColor="@color/rouge"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/view_nterrain"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:text="Nom du terrain:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/view_nterrain"
+        android:background="@color/purple_200"
+        android:hint="saisir le nom du terrain"
+        android:inputType="text"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Nom du propriétaire:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:id="@+id/proprietaire"
+        android:layout_below="@id/view_nterrain"/>
+
+    <EditText
+        android:id="@+id/prenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nom"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="58dp"
+        android:layout_toRightOf="@id/proprietaire"
+        android:background="@color/purple_200"
+        android:hint="saisir votre nom"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/view_email"
+        android:textColor="@color/white"
+        android:layout_below="@id/proprietaire"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prenom"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="25dp"
+        android:hint="Entrer votre adresse Email"
+        android:layout_toRightOf="@id/view_email"
+        android:background="@color/purple_200"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horaire Du Travail:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/view_hor"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/view_email"/>
+
+
+    <Spinner
+        android:id="@+id/hours"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_hor"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:entries="@array/hours" />
+
+    <Spinner
+        android:id="@+id/minutes"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_hor"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/hours"
+        android:background="@color/white"
+        android:entries="@array/minutes" />
+
+    <TextView
+        android:id="@+id/view_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_hor"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@id/minutes"
+        android:text="A:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/hour"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_hor"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@id/view_a"
+        android:background="@color/white"
+        android:entries="@array/hours" />
+
+    <Spinner
+        android:id="@+id/minute"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_hor"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/hour"
+        android:background="@color/white"
+        android:entries="@array/minutes" />
+
+    <TextView
+        android:id="@+id/view_terrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hours"
+        android:layout_marginTop="16dp"
+        android:text="Nombre des terrains:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/vterrain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hours"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@id/view_terrain"
+        android:background="@color/purple_200"
+        android:hint="saisir votre nobre de terrain"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/view_interest"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_terrain"
+        android:layout_marginTop="20dp"
+        android:text="Type de terrain :"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/chk5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vterrain"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@id/view_interest"
+        android:text="5/5"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/chk7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vterrain"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@id/chk5"
+        android:text="7/7"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/chk11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vterrain"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@id/chk7"
+        android:text="11/11"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/password_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/view_interest"
+        android:text="Password" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_below="@id/view_interest"
+        android:background="@color/purple_200"
+        android:layout_toRightOf="@id/password_toggle"
+        android:id="@id/activity_main_passwordEditText" />
+    <TextView
+        android:id="@+id/password_toggle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/password_toggle"
+        android:text="Retapez votre password" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:background="@color/purple_200"
+        android:layout_below="@id/password_toggle"
+        android:layout_toRightOf="@id/password_toggle1"
+        android:id="@+id/activity_main_passwordEditText" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_toggle1"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/bleue"
+        android:text="Enregistrer"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+</RelativeLayout>

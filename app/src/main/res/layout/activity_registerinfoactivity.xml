@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".REGISTERINFOACTIVITY"
+    android:background="@drawable/images"
+    >
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Saisir vos information"
+        android:textColor="@color/rouge"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Nom:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/view_lastname"
+        android:layout_below="@id/title"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="saisir votre nom"
+        android:id="@+id/nom"
+        android:layout_below="@id/title"
+        android:layout_toRightOf="@id/view_lastname"/>
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Prenom:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/view_firsname"
+        android:layout_below="@id/view_lastname"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="saisir votre prenom"
+        android:id="@+id/prenom"
+        android:layout_below="@id/nom"
+        android:layout_toRightOf="@id/view_firsname"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/view_email"
+        android:layout_below="@id/view_firsname"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:id="@+id/email"
+        android:layout_below="@id/prenom"
+        android:layout_toRightOf="@id/view_email"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date de naissance:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/view_dob"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/view_email"/>
+
+
+    <Spinner
+        android:id="@+id/jours"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/days"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/view_dob"
+        />
+
+    <Spinner
+        android:id="@+id/mois"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/months"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/view_dob"
+        android:layout_toRightOf="@id/jours"
+        />
+
+    <Spinner
+        android:id="@+id/annee"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/years"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/view_dob"
+        android:layout_toRightOf="@id/mois"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sexe:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/view_sex"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/jours"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioSex"
+        android:orientation="horizontal"
+        android:layout_below="@id/jours"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/view_sex">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioMale"
+            android:text="Homme"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioFemale"
+            android:text="Femme"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Terrain préféré:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/view_interest"
+        android:layout_below="@id/view_sex"/>
+
+    <CheckBox
+        android:id="@+id/chkAndroid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_sex"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/view_interest"
+        android:text="5/5" />
+
+    <CheckBox
+        android:id="@+id/chkPHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7/7"
+        android:layout_below="@id/view_sex"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/chkAndroid"/>
+
+    <CheckBox
+        android:id="@+id/chkJava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11/11"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/view_sex"
+        android:layout_toRightOf="@id/chkPHP"/>
+
+    <TextView
+        android:id="@+id/password_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_below="@id/chkJava"
+        android:text="Password" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_below="@id/chkJava"
+        android:layout_toRightOf="@id/password_toggle"
+        android:id="@id/activity_main_passwordEditText" />
+    <TextView
+        android:id="@+id/password_toggle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_below="@id/password_toggle"
+        android:text="Retapez votre password" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_below="@id/password_toggle"
+        android:layout_toRightOf="@id/password_toggle1"
+        android:id="@+id/activity_main_passwordEditText" />
+
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_toggle1"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/bleue"
+        android:text="Enregistrer"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+</RelativeLayout>
